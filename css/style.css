@@ -1,0 +1,262 @@
+/* The royalty free image and sounds are gotten from pixabay  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    justify-content: space-between;
+    font-family: "Delius Unicase", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.hidden {
+    opacity: 0 !important;
+    transition: opacity 0s;
+}
+
+/* I am using this to get rid of the html validator warning I got */
+.hide{
+    width: 0.1px;
+    height: 0.1px;
+    overflow: hidden;
+}
+
+/* Beggining animation */
+
+#friendBlock, #quizBlock {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: rollin 1s ease-out forwards;
+}
+
+#friendBlock {
+    animation-delay: 0.5s;
+}
+
+#quizBlock {
+    animation-delay: 1.5s;
+}
+
+@keyframes rollin {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+:focus-visible { 
+    outline: 0.3em solid red;
+}
+
+body {
+    background: linear-gradient(to bottom, #6d60ff, #a8caff);
+}
+
+header{
+    background-color: #24182C;
+    color: white;
+    padding: 2vh 3vw;
+}
+
+h1{
+    text-align: center;
+    font-family: "Luckiest Guy", serif;
+    font-weight: 400;
+    font-style: normal;
+    padding-top: 5vh;
+}
+
+#headingBlock{
+    display: flex;
+    font-size: 2rem;
+}
+
+main{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90vh;
+}
+
+#friendBlock{
+    background-color: #FFFDEE;
+    border-radius: 1em;
+    border: solid 0.3em black;    
+    width: 30vw;
+    height: 40vw;
+}
+
+#questionBlock{
+    width: 50vw;
+    background-color: #FFFDEE;
+    border-radius: 1em;
+    border: solid 0.2em black;
+    padding: 9%;
+    font-size: 2em;
+    height: 53vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#multipleChoices{
+    width: 50vw;
+    height: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.heightIncrease{
+    height: 50vh !important;
+}
+
+#quizBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 70vh;
+    gap: 20px;
+}
+.displayQuestionHeight{
+    max-height: 35vh;
+}
+.answerButton, #restart{
+    width: 22vw;
+    height: 10vh;
+    background-color: #FFFDEE;
+    border-radius: 1em;
+    border: solid 0.19em black;
+    font-size: 1.3em;
+    transition: background-color 0.2s ease;
+    padding: 3%;
+}
+
+.answerButton:hover, #restart:hover{
+    background-color: #fffebf;
+}
+
+/* I am using important to stop the hover effect from changing the background color on the correct or incorrect buttons */
+.correct {
+    background-color: #00DB00 !important;
+    color: white;
+}
+
+.incorrect {
+    background-color: #FF0000 !important;
+    color: white;
+}
+
+#restart{
+    display:block;
+    margin: auto;
+}
+
+.noHover {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.questionImage{
+    width: 20%;
+    height: 60%;
+    display: block;
+    margin: auto;
+}
+
+.betterLuck{
+    color: #FF0000;
+}
+
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 3vh 3vw;
+        line-height: 4vh;
+    }
+
+
+    h1 {
+        padding-top: 0;
+        font-size: 1.5em;
+    }
+
+    #headingBlock {
+        font-size: 1rem;
+        justify-content: space-around;
+    }
+
+    main{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+    }
+
+    #friendBlock{
+        height: 25vh;
+        width:  75vw;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+    }
+
+    #questionBlock{
+        height: 27vh;
+        width:  90vw;
+        gap: 10px;
+        font-size: 1.3em;
+    }
+    #questionBlock h2{
+        font-size: 1.2em;
+    }
+
+    .questionImage{
+        max-height: 51%;
+    }
+
+    #friendCharacter{
+        width: 43vh;
+        height: 28vh;
+    }
+    
+    #multipleChoices {
+        width: 90vw;
+        height: 2vh;
+        justify-content: space-between;
+    } 
+
+    .heightIncrease{
+        height: 22vh !important;
+    }
+
+    #quizBlock{
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 73vh;
+        gap: 0;
+    }
+
+    .answerButton{
+        width: 44vw;
+        font-size: 1.1em;
+        color: black;
+    }
+
+    .answerButton:hover, #restart:hover{
+        background-color: #FFFDEE;
+    }
+
+    #restart{
+        margin: 0;
+        padding: 0%;
+        width: 80vw;
+        color: black;
+    }
+
+}

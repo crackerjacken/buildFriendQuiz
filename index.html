@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A fun way to quiz your general knowledge and unlock a new friend character!">
+    <meta name="keywords" content="quiz, build a friend, general knowledge test, trivia game">
+    <meta name="author" content="Emmanuella Nnubia">
+    
+    <meta property="og:title" content="Need a friend? Play this quiz game">
+    <meta property="og:description" content="Answer quiz questions correctly to unlock a new friend!">
+    <meta property="og:image" content="https://emmanuellannubia.com/images/friend.jpg">
+    <meta property="og:url" content="https://emmanuellannubia.com/buildFriendQuiz/images/friend.png">
+    <meta property="og:type" content="website">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Build a Friend Quiz Game">
+    <meta name="twitter:description" content="Test your knowledge and unlock unique friends by answering quiz questions correctly!">
+    <meta name="twitter:image" content="https://emmanuellannubia.com/buildFriendQuiz/images/friend.png">
+
+    <title>Build a Friend Quiz Game</title>
+    <link rel="icon" href="./assets/images/friend.png" type="image/png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Build a Friend Quiz Game</h1>
+        <div id="headingBlock">
+            <h2 id="questionNumber">Question 0 of 6</h2>
+            <h2 id="timer">Time Left: 0S </h2>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="friendBlock">
+            <h2 class="hide">Your new Friend svg</h2>
+            
+            <!-- I drew a character and I am getting it externally -->
+            <object id="friendCharacter" data="./assets/images/friend.svg" type="image/svg+xml" 
+                title="Friend character illustration">
+            </object>
+            
+        </section>
+
+        <section id="quizBlock" aria-labelledby="questionBlock">
+            <h2 id="questionBlock">Need a friend?</h2> 
+
+            <div id="multipleChoices" role="group"> </div>
+            <button id="restart">Start</button>
+        </section>
+
+    </main>
+</body>
+
+</html>

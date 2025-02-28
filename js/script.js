@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // I am getting my svg from ./assets/images/friend.svg
     const friendCharacter = document.getElementById('friendCharacter');
-    const friendFeatures = ["body", "arm1", "arm2", "head", "eyes", "nose", "mouth", "belly"];
+    const friendFeatures = ["body", "arm1", "arm2", "head", "eyes", "nose" ];
 
     friendCharacter.addEventListener("load", () => {
         const myObject = friendCharacter.contentDocument;
